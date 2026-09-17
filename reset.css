@@ -1,0 +1,23 @@
+html, body, div, span,
+h1, h2, h3, h4, h5, h6,
+p, a, img, ul, li,
+header, nav, main, section, footer {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+header, nav, main, section, footer {
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    line-height: 1;
+}
