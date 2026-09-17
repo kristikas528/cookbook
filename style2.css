@@ -239,6 +239,7 @@ footer ul li {
 
 @media only screen and (max-width: 950px) {
     hr {
+        display: block;
         color: #000000;
         width: 60%;
         margin: 0 auto;
