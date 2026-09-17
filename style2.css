@@ -13,6 +13,9 @@ main {
 }
 
 /*Pealkiri ja bänneri pilt*/
+hr {
+    display: none;
+}
 
 header h1 {
     font-family: "Helvetica", sans-serif;
