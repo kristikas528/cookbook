@@ -1,0 +1,284 @@
+html {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/*Pealkiri ja bänneri pilt*/
+
+header h1 {
+    font-family: "Helvetica", sans-serif;
+    font-weight: 100;
+    font-size: 40px;
+    color: #000000;
+    line-height: 40px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+header h2 {
+    font-family: "Helvetica", sans-serif;
+    font-weight: 100;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: #000000;
+    font-style: italic;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+header .header-banner {
+    display: block;
+    width: 88%;
+    margin: 20px auto 40px;
+}
+
+header .header-banner div {
+    width: 100%;
+    aspect-ratio: 3 / 1;
+    overflow: hidden;
+}
+
+header .header-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+nav ul li a {
+    font-family: "Helvetica", sans-serif;
+    font-weight: 100;
+    font-size: 28px;
+    letter-spacing: 1px;
+    color: #000000;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+header nav ul {
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+header nav ul li {
+    display: inline-block;
+    padding: 16px 80px;
+}
+
+/*Meist sektsioon*/
+
+main h2 {
+    font-family: "Helvetica", sans-serif;
+    font-weight: 100;
+    font-size: 22px;
+    letter-spacing: 1px;
+    color: #000000;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.about {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8%;
+}
+
+.about-text {
+    flex: 1;
+    font-family: "Helvetica", sans-serif;
+    font-weight: 100;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 1px;
+    color: #000000;
+}
+
+.about-text h2 {
+    margin-bottom: 20px;
+}
+
+.image {
+    width: 42%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+
+    object-fit: cover;
+    display: block;
+}
+
+/*Köökide pildid ja lingid*/
+
+.gallery-links {
+    display: grid;
+    grid-template-columns: repeat(3, clamp(140px, 20vw, 400px));
+    justify-content: center;
+    gap: 80px;
+    width: 100%;
+    margin-bottom: 40px;
+    margin-top: 60px;
+}
+
+.gallery-image {
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 1 / 1;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.gallery-image div {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.gallery-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-image .post-header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    margin: 0;
+    width: 100%;
+    font-family: "Helvetica", sans-serif;
+    font-weight: 200;
+    color: #ffffff;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-align: center;
+
+    opacity: 0;
+}
+
+.gallery-image:hover .post-header {
+    animation: animation 0.5s forwards;
+}
+
+@keyframes animation {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/*Jalus ja sotsmeedia ikoonid*/
+
+footer {
+    width: calc(100% - 80px);
+    padding: 40px;
+    background-color: #1720292b;
+    margin-top: auto;
+    overflow: hidden;
+}
+
+footer ul {
+    width: fit-content;
+    float: left;
+    padding-left: 0px;
+}
+
+footer ul li {
+    display: block;
+    padding: 0 0 10px 0;
+}
+
+
+.footer-sm {
+    width: 50px;
+    float: right;
+}
+
+.footer-sm img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.footer-info {
+
+    font-family: "Helvetica", sans-serif;
+    font-weight: 100;
+    font-size: 15px;
+    padding: 10px;
+    color: #000000;
+    text-align: left;
+
+}
+
+@media only screen and (max-width: 950px) {
+    hr {
+        color: #000000;
+        width: 60%;
+        margin: 0 auto;
+        margin-bottom: 5px;
+    }
+
+    .about {
+        margin-top: 5px;
+    }
+
+    header h2 {
+    font-size: 15px;
+    }
+
+    header nav ul {
+        display: flex;
+        gap: 20px;
+    }
+
+    header nav ul li {
+        padding: 10px;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+    }
+
+    .about img {
+        display: none;
+    }
+
+        .gallery-image .post-header {
+        opacity: 1;
+    }
+
+    .gallery-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery-image {
+        width: 220px;
+        height: 220px;
+    }
+}
